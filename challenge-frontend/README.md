@@ -1,4 +1,4 @@
-# Concesionaria de Vehículos
+# Front-End Challenge
 
 Esta aplicación esta desarrollada utilizando **React.js**, **TypeScript** y **Node.js**.
 
