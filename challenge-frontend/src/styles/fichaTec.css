@@ -4,8 +4,6 @@
   margin: auto;
   font-family: Arial, sans-serif;
 }
-
-/* Sección principal */
 .main-info {
   display: flex;
   align-items: center;
@@ -28,7 +26,6 @@
   color: #666;
 }
 
-/* Características del modelo */
 .features-container {
   display: flex;
   overflow-x: auto;
@@ -58,8 +55,13 @@
   font-size: 14px;
   color: #666;
 }
+.text-first {
+  flex-direction: row;
+}
+.image-first {
+  flex-direction: row-reverse;
+}
 
-/* Resaltados del modelo */
 .highlights-container {
   display: flex;
   flex-direction: column;
@@ -86,4 +88,26 @@
 .highlight-text p {
   font-size: 14px;
   color: #666;
+}
+.carousel-container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+.carousel-slider {
+  text-align: center;
+}
+.carousel-slider img {
+  width: 100%;
+  border-radius: 20px;
+}
+.carousel-slider h3 {
+  margin: 10px 0 5px;
+  font-size: 20px;
+  color: #000;
+}
+.carousel-slider p {
+  font-size: 12px;
+  color: #000;
 }

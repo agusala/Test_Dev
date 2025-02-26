@@ -7,9 +7,18 @@ const categories = [
   "Pickups y Comerciales",
   "SUVs y Crossovers",
 ];
+const ordenarPor = [
+  "Nada",
+  "Precio más bajo",
+  "Precio más alto",
+  "Mas Nuevo",
+  "Mas Viejo",
+];
 
 const Filter: React.FC = () => {
   const [selected, setSelected] = useState<string>("Todos");
+  const [ordenar, setOrdenar] = useState<string>("Nada");
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
   return (
     <div className="filter-container">
@@ -25,7 +34,22 @@ const Filter: React.FC = () => {
           </button>
         ))}
       </div>
-      <span className="order-label">Ordenar por ▼</span>
+      <span className="order-label" onClick={() => setShowMenu(!showMenu)}>
+        Ordenar por ▼
+      </span>
+      {showMenu && (
+        <div className="order-dropdown">
+          {ordenarPor.map((orden) => (
+            <button
+              key={orden}
+              className={`order-item ${ordenar === orden ? "active" : ""}`}
+              onClick={() => setOrdenar(orden)}
+            >
+              {orden}
+            </button>
+          ))}
+        </div>
+      )}
     </div>
   );
 };

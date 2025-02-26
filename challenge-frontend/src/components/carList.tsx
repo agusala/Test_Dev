@@ -9,7 +9,10 @@ const CarList = () => {
 
   useEffect(() => {
     getModels()
-      .then((data) => setModels(data))
+      .then((data) => {
+        console.log(data);
+        setModels(data);
+      })
       .catch((err) => setError(err.message))
       .finally(() => setLoading(false));
   }, []);
@@ -21,6 +24,7 @@ const CarList = () => {
       {models.map((model) => (
         <Card
           key={model.id}
+          id={model.id}
           title={model.name}
           description={`${model.year}| $${model.price}`}
           image={model.photo}
