@@ -1,0 +1,161 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
+  border-bottom: 3px solid #888;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.logo-text {
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-link {
+  color: #000;
+  margin-right: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu-text {
+  color: #000;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  color: #000;
+}
+
+/* Menú lateral derecho */
+.right-side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  animation: slideInRight 0.3s ease-out forwards;
+  overflow-y: auto;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+}
+
+.menu-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.close-button {
+  color: #000;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+}
+
+.menu-sections {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.menu-section {
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.last-section {
+  margin-top: 20px;
+  background-color: #f5f5f5;
+  padding: 15px 0;
+}
+
+.last-section .dropdown-link {
+  color: #888;
+}
+
+.dropdown-link:hover {
+  background-color: #e0e0e0;
+  color: red;
+}
+
+.navbar-link:hover {
+  color: red;
+}
+
+.hamburger-icon.active {
+  color: red;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .right-side-menu {
+    width: 100%;
+  }
+}

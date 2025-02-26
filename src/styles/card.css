@@ -1,0 +1,58 @@
+.card {
+  max-width: 20rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card:hover .button-datail {
+  display: block;
+}
+
+.card:hover .card-title {
+  color: red;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  color: #4a5568;
+}
+.models-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  color: black;
+}
+
+.button-datail {
+  display: none;
+  margin: 10px auto;
+  padding: 8px, 12px;
+  background-color: black;
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.button-datail:hover {
+  background-color: black;
+}
